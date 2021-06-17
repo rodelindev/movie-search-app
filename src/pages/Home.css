@@ -29,3 +29,9 @@ body, input {
         flex: 0 1 calc(85% - 1rem);
     }
 }
+
+.elemento-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
