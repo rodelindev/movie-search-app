@@ -7,7 +7,7 @@ const SearchBar = ({ datakey, change, submit }) => {
         <nav className="navbar">
             <div className="container-input">
                 <form className="d-flex">
-                    <input className="form-control" placeholder="Escribe 'Dragon Ball'" type="text"
+                    <input className="form-control" placeholder="Try writing 'Dragon Ball'" type="text"
                         value={datakey} onChange={change} />
                 </form>
             </div>

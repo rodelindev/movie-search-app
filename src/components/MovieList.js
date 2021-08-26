@@ -15,7 +15,7 @@ const MovieList = ({ data }) => {
                             year={res.Year}
                             type={res.Type}
                         />
-                    ) : <h1 className="text-center">"En espera..."</h1>
+                    ) : <h1 className="text-center">"You can search Movies or Series"</h1>
             }
         </div>
     )
