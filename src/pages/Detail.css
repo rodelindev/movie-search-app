@@ -1,6 +1,6 @@
 .title {
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
     margin: 0;
 }
 
@@ -22,14 +22,67 @@ h1 {
 
 .poster-movie {
     padding: 0 1rem;
-    width: 30%; 
+    width: 20%; 
 }
 
 img {
     width: 100%;
     border-radius: 1rem;
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    -ms-border-radius: 1rem;
-    -o-border-radius: 1rem;
+}
+
+.movie-data {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.tags {
+    margin: .5rem 0;
+}
+
+.tag {
+    background-color: #f5f5f5;
+    color: #4a4a4a;
+    border-radius: 1rem;
+    margin: .3rem;
+    flex: none;
+    padding: .4rem;
+}
+
+.tag-style {
+    background-color: #ffdd57;
+    color: rgba(0,0,0,.7);
+    padding: .2rem;
+    margin: 1rem 0;
+    border-radius: .6rem;
+}
+
+.actors {
+    margin: 1rem 0;
+}
+
+.home-button {
+    text-decoration: none;
+}
+
+.button-style {
+    padding: .5rem;
+    border-color: #4a4a4a;
+    background-color: white;
+    color: #4a4a4a;
+    box-sizing: 1px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width:448px) {
+    .content-detail{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .poster-movie {
+        padding: 0 1rem;
+        width: 100%; 
+    }
 }

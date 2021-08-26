@@ -1,11 +1,20 @@
 import React from 'react';
 import useMovieDetail from '../hooks/useMovieDetail';
 import './Detail.css';
+import { Link } from "react-router-dom";
 
 const Detail = (props) => {
     let id = props.match.params.movieid;
     const { detail } = useMovieDetail(id);
-    const { Title, Poster, Year, Type } = detail;
+    const {
+        Title,
+        Poster,
+        Type,
+        Released,
+        Country,
+        imdbRating,
+        Actors
+    } = detail;
 
     return (
         <div>
@@ -17,15 +26,36 @@ const Detail = (props) => {
                     <img src={Poster} alt="" />
                 </div>
                 <div className="movie-description">
-                    <p><strong>Year: </strong> {Year} </p>
-                    <p><strong>Type: </strong> {Type} </p>
-                    <p><strong></strong> </p>
-                    <p><strong></strong> </p>
-                    <p><strong>Actors: </strong> </p>
-                </div>
+                    <div className="movie-data tags">
+                        <p className="tag">{Released}</p>
+                        <p className="tag">{Country}</p>
+                        <p className="tag">{Type}</p>
+                    </div>
 
+                    <p>
+                        <strong>IMDB Rating:</strong>
+                        <br />
+                        <br />
+                        <span className="tag-style">
+                            <i className="fas fa-star detailStar"></i>{imdbRating} / 10
+                        </span>
+                    </p>
+                    <p className="actors">
+                        <strong>Actors: </strong>
+                        <br />
+                        <br />
+                        {Actors}
+                    </p>
+                    <div>
+                        <button className="button-style" >
+                            <Link to={`/`} className="home-button" >
+                                Return to home
+                            </Link>
+                        </button>
+                    </div>
+                </div>
             </div>
-        </div>
+        </div >
     )
 }
 
