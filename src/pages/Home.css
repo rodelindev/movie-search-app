@@ -30,8 +30,9 @@ body, input {
     }
 }
 
-.elemento-status {
+.error-status {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
