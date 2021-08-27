@@ -6,9 +6,9 @@ const MovieList = ({ data }) => {
         <div className="principal-container">
             {
                 data && data.length > 0
-                    ? data.map((res) =>
+                    ? data.map((res, index) =>
                         <Card
-                            key={res.imdbID}
+                            key={index}
                             id={res.imdbID}
                             poster={res.Poster}
                             title={res.Title}

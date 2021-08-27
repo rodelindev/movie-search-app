@@ -8,8 +8,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Switch>
-          <Route path={'/'} component={Home} />
-          <Route path={`/detail/:movieid`} component={Detail} />
+          <Route exact path={'/'} component={Home} />
+          <Route path={'/detail/:movieid'} component={Detail} />
           <Route component={NotFound} />
         </Switch>
       </BrowserRouter>
